@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documentacio Hacer Mods</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Unbounded&display=swap');
+        </style>
+</head>
+<body>
+    <nav id="navbar">
+        <header id="header1">MENU DE NAVEGACION</header>
+        <ul class="nav-list">
+            <li><a class="nav-link" href="#Introduccion">Introduccion</a></li>
+            <li><a class="nav-link" href="#Metodologia">Metodologia</a></li>
+            <li><a class="nav-link" href="#Forma_de_extraer">Forma de extraer</a></li>
+            <li><a class="nav-link" href="#Modificacion">Modificacion</a></li>
+            <li><a class="nav-link" href="#Generar_mod">Generar mod</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduccion" class="main-section">
+            <header>Introduccion</header>
+            <p>Hey que onda gente ahora estamos con un micro tutorial hablando acerca de los mods en el actual Survivalcraft 2.3 2023, 
+                cabe mencionar que los mods ahora son diferentes a los que antes desarrollabamos, asi que te platicare en este blog un poco de como es su
+                desarrollo ahora y demas, para que tengas el conocimiento necesario para introducirte al desarrollo de los mods.
+            </p>
+            <p>
+                Para comenzar un mod es una modificacion de una aplicacion en este caso <code>Survivalcraft</code> dentro del mismo juego sin alterar su estructura original,
+                esto nos permite ampliar el desarrollo y la historia del juego a como mejor nos convenga, los mods actualmente se cargan en el Survivalcraft 1.44 API
+                que es la app de cuarta generacion que soporta mods.
+            </p>
+            <p>Tenemos ya varios mods muy conocidos por todos ustedes a continuacion te platicare cuales son con una breve lista: </p>
+            <ol class="navpro">
+                <li>.-Mod Pro</li>
+                <li>.-Expand Mod</li>
+                <li>.-Tribalcraft</li>
+                <li>.-Megacraft</li>
+                <li>.-Dayz Mod</li>
+                <li>.-Guns mod</li>
+                <li>.-Star Wars mod</li>
+                <li>.-Y mas...</li>
+            </ol>
+            <p>Para comenzar debes saber que el juego tiene una carpeta que contiene todos los recursos llamada <code>CONTENT.PAK</code>, ahora esta informacion esta alojada
+                en un archivo ZIP llamado <code>Assets</code>para que su edicion sea mas facil como su accesibilidad, aqui puedes encontrar todas las texturas, animales, sonidos y esos recursos
+                que le dan vidaa Survivalcraft.
+            </p>
+        </section>
+        <section id="Metodologia" class="main-section">
+            <header>Metodologia</header>
+            <p>
+                La forma de extrar los recursos es copiando su contenido en primer lugar y tenerlo en una carpeta aparte, una vez haciendo esto te aconsejo hacer lo siguiente.
+            </p>
+            <p>
+                Haz una carpeta aparte con el nombre de tu mod y ve insertando a continuacion la informacion que quieras implementar siguiendo las rutas del contenido original,
+                como por ejemplo <code>Textures/Creatures/Cow.png</code> es la ruta de la textura de la vaca y debes importarla todo para asi al modificarla y el juego te la visualize.
+            </p>
+            <p>
+                La metodologia actual se basa en que cuando acabes de desarollar tu mod en dicha carpeta creas a partir de los archivos de esa carpeta un ZIP con el nombre de tu mod, 
+                el contenido de recursos Assets debe ir dentro de ese zip, una vez creado el zip renombra a  por ejemplo: <code>EJEMPLO.scmod</code> y ese archivo que se haga debes insertarlo
+                asi en el juego para que el lector de mods lo lea.
+            </p>
+        </section>
+        <section id="Forma_de_extraer" class="main-section">
+            <header>Forma de extraer</header>
+                <p>La forma de extraer los recursos varia dependiendo su funcion pero a continuacion te explicare el de unos cuantos:</p>
+                <h3>Texturas</h3>
+                <p>
+                    Las texturas que encuentras en el juego son todas en formato .PNG, para poder editarlas a tu gusto debes contar con un editor open source o privado
+                    de imagenes como Photoshop CC y guardarlas en este mismo formato siguiendo la ruta de la imagen que modifiques.
+                </p>
+                <h3>Database.xml</h3>
+                <p>
+                    Este archivo es la base de datos de las entidades, animales, comportamientos, componentes y demas del juego que agrega principalmente a cada entidad,
+                    para editar este archivo requieres un editor de texto XML como <code>Notepad++</code> y seguir ciertas reglas para agregar animales o cambiar sus comportamientos.
+                </p>
+                <h3>DLL o codigo</h3>
+                <p>EL dll o codigo del juego es lo que permite todo lo que tu ves en el juego su codificacion,comportamientos y demas, para modificarlos debes descargar como Herramienta
+                    <code>Visual studio</code> y crear una solucion DLL con referencias del juego, asi podras agregar nuevos scripts a tu mod.
+                </p>
+                <h3>Sonidos</h3>
+                <p>El juego contiene multiples sonidos que puedes tu ir agregando o modificando dependiendo la experiencia
+                     de usuario que estes buscando, asi que usa un editor de sonido especializado en .wav para modificarlos siguiendo los KBS de cada sonido</p>
+                <h3>Otros</h3>
+                <p>Los demas archivos xml y de codigo debes descubrir que estructura siguen para su escritura y despues
+                     modificarlos, el juego funciona con el lenguaje de programacion de c#, XML, y demas escrito por el autor KAALUS
+                </p>
+        </section>
+        <section id="Modificacion" class="main-section">
+            <header>Modificacion</header>
+            <h3>Database.xml</h3>
+            <p>Para modificar una entidad animal debe saber que los guids de cada animal son irrepetibles, son escritos estos de forma hexadecimal.
+                Los animales tienen una id en el huevo de spawn que los identifica, para usted agregar uno debe comenzar despues del 49, y asi consecutivamente,
+                los comportamientos de los animales de conforman de componentes que puede ir encontrando en cada animal de igual o diferente forma.
+            </p>
+            <h3>Clothes.xml</h3>
+            <p>La ropa tiene ciertos ids que identifican cada prenda, cualidades que usted ver son los parametros, estos le dan la diferencia o igualdad a cada prenda
+                para asi qe el jugador pueda conseguirla y una breve descripcion al final de cada prenda de ropa que demuestra de que se trata.
+            </p>
+            <h3>CraftingRecipes.xml</h3>
+            <p>Un sistema de la elaboracion de los bloques se basa en ciertos parametros, con bloques sencillos que tienen sus respectivos identificadores de crafteo, el nombre del bloque resultante, y como se
+                expresa eso en forma de receta de 3x3.
+            </p>
+        </section>
+        <section id="Generar_mod" class="main-section">
+            <header>Generar mod</header>
+            <p>El metodo de generacion de archivo de mod se explico en un apartado anterior, sin embargo el generar un mod puede publicarlo en la comunidad china de modders
+                en youtube como yo su servidor RGPRO, o igual puede optar por tenerlo usted mismo el archivo .SCMOD, suerte en su mod.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+#main-doc{
+    
+    position: absolute;
+    margin-left:25%;
+    width: 71%;
+    padding: 20px;
+    margin-bottom: 110px;
+    font-family: 'Unbounded', cursive;
+    background-image: url("https://i.postimg.cc/mk5f2vfy/Survivalcraft-2023-01-06-18-11-02.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+
+#navbar {
+    font-family: 'Fredoka One', cursive;
+    position: fixed;
+    min-width: 23%;
+    top: 0px;
+    left: 0px;
+    width: 25%;
+    height: 100%;
+    border:2px solid white;
+    background-image: url("https://i.postimg.cc/134XBS3s/Survivalcraft-2022-12-09-08-28-44.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#header1{
+    background-image: linear-gradient(to right top, #31b115, #2ebf18, #2ace1c, #22dc20, #12eb24);
+    text-align: center;
+    padding: 12px;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 0.5px white;
+    display: block;
+    width: 75%;
+    margin-top: 5px;
+    border: 3px solid rgb(17, 85, 0);
+}
+
+.nav-link{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px 25px;
+    margin:10px 5px 10px 5px;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.nav-link:hover{
+    background-color: rgba(15, 232, 33, 0.496);
+}
+
+#nav-link{
+    display: block;
+}
+
+header{
+    background: hsla(94, 100%, 56%, 1);
+    background: linear-gradient(225deg, hsla(94, 100%, 56%, 1) 0%, hsla(117, 70%, 75%, 1) 52%, hsla(94, 98%, 38%, 1) 100%);
+    display: block;
+    width: 30%;
+    font-size: x-large;
+    padding: 10px;
+    margin: auto auto;
+    text-align: center;
+}
+
+p{
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    color:rgb(235, 235, 235);
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+h3{
+    font-size: 1.5rem;
+    display: block;
+    color: white;
+    -webkit-text-stroke: 4px solid red;
+    text-align: left;
+}
+
+.navpro li{
+    margin: auto auto;
+    padding: 5px;
+    text-align: left;
+    width: 30%;
+    display: block;
+    background: linear-gradient(to right top, #31b115, #2ebf18, #2ace1c, #22dc20, #12eb24);;
+}
+
+
+
+@media only screen and (max-width:800px){
+    #navbar{
+        position: relative;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        padding-bottom:10px ;
+        z-index: 1;
+    }
+    #main-doc{
+        width: 100%;
+        position: relative;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    header{
+        width: 50%;
+    }
+}
